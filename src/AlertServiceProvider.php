@@ -1,59 +1,39 @@
 <?php
 
-
-
-declare(strict_types=1);
-
 namespace BrianFaust\Alert;
 
-use BrianFaust\ServiceProvider\AbstractServiceProvider;
+use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Container\Container;
 
-class AlertServiceProvider extends AbstractServiceProvider
+class AlertServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
      */
-    public function boot(): void
+    public function boot()
     {
-        $this->publishConfig();
-        $this->publishViews();
-        $this->loadViews();
+        $this->publishes([
+            __DIR__.'/../config/laravel-alert.php' => config_path('laravel-alert.php'),
+        ], 'config');
+
+        $this->publishes([
+            __DIR__.'/../resources/views' => base_path('resources/views/vendor/laravel-alert'),
+        ], 'views');
+
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-alert');
     }
 
     /**
      * Register the application services.
      */
-    public function register(): void
+    public function register()
     {
-        parent::register();
-
-        $this->mergeConfig();
+        $this->mergeConfigFrom(__DIR__.'/../config/laravel-alert.php', 'laravel-alert');
 
         $this->app->singleton('alert', function (Container $app) {
             return new Alert($app['session.store']);
         });
 
         $this->app->alias('alert', Alert::class);
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides(): array
-    {
-        return array_merge(parent::provides(), ['alert']);
-    }
-
-    /**
-     * Get the default package name.
-     *
-     * @return string
-     */
-    public function getPackageName(): string
-    {
-        return 'alert';
     }
 }

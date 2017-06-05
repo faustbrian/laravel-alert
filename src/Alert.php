@@ -1,9 +1,5 @@
 <?php
 
-
-
-declare(strict_types=1);
-
 namespace BrianFaust\Alert;
 
 use Illuminate\Session\Store;
@@ -39,7 +35,7 @@ class Alert
      */
     public function success($message, $title = null): self
     {
-        return $this->flash($message, config('alert.classes.success'), $title);
+        return $this->flash($message, config('laravel-alert.classes.success'), $title);
     }
 
     /**
@@ -50,7 +46,7 @@ class Alert
      */
     public function info($message, $title = null): self
     {
-        return $this->flash($message, config('alert.classes.info'), $title);
+        return $this->flash($message, config('laravel-alert.classes.info'), $title);
     }
 
     /**
@@ -61,7 +57,7 @@ class Alert
      */
     public function warning($message, $title = null): self
     {
-        return $this->flash($message, config('alert.classes.warning'), $title);
+        return $this->flash($message, config('laravel-alert.classes.warning'), $title);
     }
 
     /**
@@ -72,7 +68,7 @@ class Alert
      */
     public function error($message, $title = null): self
     {
-        return $this->flash($message, config('alert.classes.error'), $title);
+        return $this->flash($message, config('laravel-alert.classes.error'), $title);
     }
 
     /**

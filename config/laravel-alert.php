@@ -1,7 +1,6 @@
 <?php
 
 
-
 return [
 
     'template' => 'alert::templates.bootstrap.default',
@@ -11,6 +10,6 @@ return [
         'info' => 'info',
         'warning' => 'warning',
         'error' => 'danger',
-    ]
+    ],
 
 ];

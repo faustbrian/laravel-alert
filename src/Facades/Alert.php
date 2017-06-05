@@ -1,9 +1,5 @@
 <?php
 
-
-
-declare(strict_types=1);
-
 namespace BrianFaust\Alert\Facades;
 
 use Illuminate\Support\Facades\Facade;
