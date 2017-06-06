@@ -30,6 +30,14 @@ class AlertServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/laravel-alert.php', 'laravel-alert');
 
+        $this->registerBuilder();
+    }
+
+    /**
+     * Register the builder.
+     */
+    private function registerBuilder()
+    {
         $this->app->singleton('alert', function (Container $app) {
             return new Alert($app['session.store']);
         });
