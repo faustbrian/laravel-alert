@@ -23,7 +23,7 @@ Within your controllers, before you perform a redirect...
 ``` php
 public function store(Alert $alert)
 {
-    alert()->message('Welcome Aboard!');
+    alert()->info('Welcome Aboard!');
 
     return redirect()->route('dashboard');
 }
@@ -31,12 +31,11 @@ public function store(Alert $alert)
 
 You may also do:
 
-- `alert()->message('Message')`
+- `alert()->flash('Message')`
 - `alert()->success('Message')`
 - `alert()->info('Message')`
 - `alert()->warning('Message')`
 - `alert()->error('Message')`
-- `alert()->overlay('Modal Message', 'Modal Title')`
 
 Again, this will set one key in the session:
 
@@ -44,55 +43,16 @@ Again, this will set one key in the session:
     - `message` - The message you're alerting
     - `level`   - A string that represents the type of notification
     - `title`   - A string that will show up as the modal title
-    - `overlay` - A boolean that indicates whether or not the alert is an overlay
 
 Because alert messages and overlays are so common, if you want, you may use (or modify) the views that are included with this package. Simply append to your layout view:
 
 ```html
-@include('alert::messages')
-```
-
-## Example
-
-```html
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Laravel PHP Framework</title>
-        <!-- Twitter Bootstrap -->
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-        <!-- ZURB Foundation -->
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/foundation/5.4.7/stylesheets/foundation.min.css">
-    </head>
-
-    <body>
-        <div class="container">
-            @include('alert::messages')
-        </div><!-- /.container -->
-
-        <!-- jQuery -->
-        <script src="//cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"></script>
-        <!-- Twitter Bootstrap -->
-        <script src="//cdn.jsdelivr.net/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-        <!-- ZURB Foundation -->
-        <script src="//cdn.jsdelivr.net/foundation/5.4.7/javascripts/foundation.min.js"></script>
-        <script>
-            // Twitter Bootstrap
-            $('#alert-overlay-modal').modal();
-
-            // ZURB Foundation
-            $('#alert-overlay-modal').foundation('reveal', 'open');
-        </script>
-    </body>
-</html>
-
+@include('laravel-alert::messages')
 ```
 
 #### Message (Defaults to Info)
 ``` php
-alert()->message('Welcome aboard!');
+alert()->flash('Welcome aboard!');
 
 return redirect()->route('dashboard');
 ```
@@ -123,21 +83,6 @@ return redirect()->route('dashboard');
 
 ``` php
 alert()->error('Change a few things up and try submitting again.');
-
-return redirect()->route('dashboard');
-```
-
-#### Important
-
-``` php
-alert('You successfully read this important alert message.')->important();
-
-return redirect()->route('dashboard');
-```
-
-#### Modal / Overlay
-``` php
-alert()->overlay('One fine body...');
 
 return redirect()->route('dashboard');
 ```
