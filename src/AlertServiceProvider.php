@@ -1,5 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * This file is part of Laravel Alert.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace BrianFaust\Alert;
 
 use Illuminate\Support\ServiceProvider;
@@ -30,18 +41,22 @@ class AlertServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/laravel-alert.php', 'laravel-alert');
 
-        $this->registerBuilder();
-    }
-
-    /**
-     * Register the builder.
-     */
-    private function registerBuilder()
-    {
         $this->app->singleton('alert', function (Container $app) {
             return new Alert($app['session.store']);
         });
 
         $this->app->alias('alert', Alert::class);
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return string[]
+     */
+    public function provides(): array
+    {
+        return [
+            'alert',
+        ];
     }
 }

@@ -1,8 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * This file is part of Laravel Alert.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace BrianFaust\Tests\Alert\Facades;
 
-use BrianFaust\Alert\Facades\Alert;
+use BrianFaust\Alert\Facades\Alert as Facade;
+use BrianFaust\Alert\Alert;
 use BrianFaust\Tests\Alert\AbstractTestCase;
 use GrahamCampbell\TestBenchCore\FacadeTrait;
 
@@ -27,7 +39,7 @@ class AlertTest extends AbstractTestCase
      */
     protected function getFacadeClass()
     {
-        return \BrianFaust\Alert\Facades\Alert::class;
+        return Facade::class;
     }
 
     /**
@@ -37,6 +49,6 @@ class AlertTest extends AbstractTestCase
      */
     protected function getFacadeRoot()
     {
-        return \BrianFaust\Alert\Alert::class;
+        return Alert::class;
     }
 }

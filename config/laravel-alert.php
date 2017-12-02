@@ -1,9 +1,8 @@
 <?php
 
-
 return [
 
-    'template' => 'alert::templates.bootstrap.default',
+    'template' => 'alert::templates.bootstrap',
 
     'classes' => [
         'success' => 'success',
