@@ -40,7 +40,7 @@ class Alert
     /**
      * Flash an alert.
      *
-     * @param string $message
+     * @param string|array $message
      * @param string $level
      * @param string $title
      * @param bool   $overlay
@@ -64,12 +64,12 @@ class Alert
     /**
      * Flash a success alert.
      *
-     * @param string $message
+     * @param string|array $message
      * @param string|null $title
      *
      * @return \BrianFaust\Alert\Alert
      */
-    public function success(string $message, ?string $title = null): self
+    public function success($message, ?string $title = null): self
     {
         return $this->flash($message, config('laravel-alert.classes.success'), $title);
     }
@@ -77,12 +77,12 @@ class Alert
     /**
      * Flash an info alert.
      *
-     * @param string $message
+     * @param string|array $message
      * @param string|null $title
      *
      * @return \BrianFaust\Alert\Alert
      */
-    public function info(string $message, ?string $title = null): self
+    public function info($message, ?string $title = null): self
     {
         return $this->flash($message, config('laravel-alert.classes.info'), $title);
     }
@@ -90,12 +90,12 @@ class Alert
     /**
      * Flash a warning alert.
      *
-     * @param string $message
+     * @param string|array $message
      * @param string|null $title
      *
      * @return \BrianFaust\Alert\Alert
      */
-    public function warning(string $message, ?string $title = null): self
+    public function warning($message, ?string $title = null): self
     {
         return $this->flash($message, config('laravel-alert.classes.warning'), $title);
     }
@@ -103,12 +103,12 @@ class Alert
     /**
      * Flash an error alert.
      *
-     * @param string $message
+     * @param string|array $message
      * @param string|null $title
      *
      * @return \BrianFaust\Alert\Alert
      */
-    public function error(string $message, ?string $title = null): self
+    public function error($message, ?string $title = null): self
     {
         return $this->flash($message, config('laravel-alert.classes.error'), $title);
     }
