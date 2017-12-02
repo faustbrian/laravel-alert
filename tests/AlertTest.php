@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace BrianFaust\Tests\Alert;
 
 use BrianFaust\Alert\Alert;
-use BrianFaust\Tests\Alert\AbstractTestCase;
 
 class AlertTest extends AbstractTestCase
 {

@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace BrianFaust\Tests\Alert;
 
-use GrahamCampbell\TestBench\AbstractPackageTestCase;
 use BrianFaust\Alert\AlertServiceProvider;
+use GrahamCampbell\TestBench\AbstractPackageTestCase;
 
 abstract class AbstractTestCase extends AbstractPackageTestCase
 {
