@@ -42,12 +42,11 @@ class Alert
      *
      * @param string|array $message
      * @param string $level
-     * @param string $title
-     * @param bool   $overlay
+     * @param string|null $title
      *
      * @return \BrianFaust\Alert\Alert
      */
-    public function flash($message, string $level = 'info', ?string $title = null, bool $overlay = false): self
+    public function flash($message, string $level = 'info', ?string $title = null): self
     {
         if (is_array($message)) {
             $message = new MessageBag($message);

@@ -2,7 +2,7 @@
 
 return [
 
-    'template' => 'alert::templates.bootstrap',
+    'template' => 'laravel-alert::templates.bootstrap',
 
     'classes' => [
         'success' => 'success',

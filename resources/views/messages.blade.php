@@ -1,1 +1,1 @@
-@include(config('alert.template'))
+@include(config('laravel-alert.template'))
