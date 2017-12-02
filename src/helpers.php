@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 use BrianFaust\Alert\Alert;
 
-if (!function_exists('alert')) {
+if (! function_exists('alert')) {
     /**
      * Flash an alert.
      *
