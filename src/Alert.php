@@ -19,11 +19,15 @@ use Illuminate\Support\MessageBag;
 class Alert
 {
     /**
-     * @var Store
+     * The session storage.
+     *
+     * @var \Illuminate\Session\Store
      */
     private $session;
 
     /**
+     * Construct a new Alert.
+     *
      * \BrianFaust\Alert\Alert constructor.
      *
      * @param Store $session
@@ -41,7 +45,7 @@ class Alert
      * @param string $title
      * @param bool   $overlay
      *
-     * @return $this
+     * @return \BrianFaust\Alert\Alert
      */
     public function flash($message, string $level = 'info', ?string $title = null, bool $overlay = false): self
     {
