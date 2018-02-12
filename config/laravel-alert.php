@@ -6,9 +6,9 @@ return [
 
     'classes' => [
         'success' => 'success',
-        'info' => 'info',
+        'info'    => 'info',
         'warning' => 'warning',
-        'error' => 'danger',
+        'error'   => 'danger',
     ],
 
 ];

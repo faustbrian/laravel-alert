@@ -14,8 +14,8 @@ declare(strict_types=1);
 namespace BrianFaust\Tests\Alert\Facades;
 
 use BrianFaust\Alert\Alert;
-use BrianFaust\Tests\Alert\AbstractTestCase;
 use BrianFaust\Alert\Facades\Alert as Facade;
+use BrianFaust\Tests\Alert\AbstractTestCase;
 use GrahamCampbell\TestBenchCore\FacadeTrait;
 
 class AlertTest extends AbstractTestCase

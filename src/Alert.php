@@ -41,8 +41,8 @@ class Alert
      * Flash an alert.
      *
      * @param string|array $message
-     * @param string $level
-     * @param string|null $title
+     * @param string       $level
+     * @param string|null  $title
      *
      * @return \BrianFaust\Alert\Alert
      */
@@ -64,7 +64,7 @@ class Alert
      * Flash a success alert.
      *
      * @param string|array $message
-     * @param string|null $title
+     * @param string|null  $title
      *
      * @return \BrianFaust\Alert\Alert
      */
@@ -77,7 +77,7 @@ class Alert
      * Flash an info alert.
      *
      * @param string|array $message
-     * @param string|null $title
+     * @param string|null  $title
      *
      * @return \BrianFaust\Alert\Alert
      */
@@ -90,7 +90,7 @@ class Alert
      * Flash a warning alert.
      *
      * @param string|array $message
-     * @param string|null $title
+     * @param string|null  $title
      *
      * @return \BrianFaust\Alert\Alert
      */
@@ -103,7 +103,7 @@ class Alert
      * Flash an error alert.
      *
      * @param string|array $message
-     * @param string|null $title
+     * @param string|null  $title
      *
      * @return \BrianFaust\Alert\Alert
      */
