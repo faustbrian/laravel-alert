@@ -1,22 +1,22 @@
 # Laravel Alert
 
-[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-Alert/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-Alert)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-alert.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-Alert.svg?style=flat-square)](https://github.com/faustbrian/Laravel-Alert/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-Alert.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-Alert)
+[![Build Status](https://img.shields.io/travis/artisanry/Alert/master.svg?style=flat-square)](https://travis-ci.org/artisanry/Alert)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/artisanry/alert.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/artisanry/Alert.svg?style=flat-square)](https://github.com/artisanry/Alert/releases)
+[![License](https://img.shields.io/packagist/l/artisanry/Alert.svg?style=flat-square)](https://packagist.org/packages/artisanry/Alert)
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/laravel-alert
+$ composer require artisanry/alert
 ```
 
 If you need to modify the configuration or the views, you can run:
 
 ```bash
-php artisan vendor:publish --provider="BrianFaust\Alert\AlertServiceProvider"
+php artisan vendor:publish --provider="Artisanry\Alert\AlertServiceProvider"
 ```
 
 The package views will now be located in the `app/resources/views/vendor/alert/` directory and the configuration will be located at `app/config/alert.php`.
@@ -124,7 +124,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -133,4 +133,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)
+[MIT](LICENSE) © [Brian Faust](https://basecode.sh)

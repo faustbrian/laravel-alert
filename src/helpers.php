@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Alert.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-use BrianFaust\Alert\Alert;
+use Artisanry\Alert\Alert;
 
 if (!function_exists('alert')) {
     /**
@@ -20,7 +20,7 @@ if (!function_exists('alert')) {
      * @param string|null $message
      * @param string|null $style
      *
-     * @return \BrianFaust\Alert\Alert
+     * @return \Artisanry\Alert\Alert
      */
     function alert(string $message = null, string $style = 'info'): Alert
     {

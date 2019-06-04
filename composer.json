@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-alert",
+    "name": "artisanry/alert",
     "description": "Alert messages for Laravel 5.",
     "keywords": ["laravel", "framework", "alert", "flash"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Alert\\": "src/"
+            "Artisanry\\Alert\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -27,7 +27,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Alert\\": "tests"
+            "Artisanry\\Tests\\Alert\\": "tests"
         }
     },
     "config": {
@@ -40,10 +40,10 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Alert\\AlertServiceProvider"
+                "Artisanry\\Alert\\AlertServiceProvider"
             ],
             "aliases": {
-                "Alert": "BrianFaust\\Alert\\Facades\\Alert"
+                "Alert": "Artisanry\\Alert\\Facades\\Alert"
             }
         }
     },

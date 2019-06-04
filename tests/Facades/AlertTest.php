@@ -5,17 +5,17 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Alert.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Tests\Alert\Facades;
+namespace Artisanry\Tests\Alert\Facades;
 
-use BrianFaust\Alert\Alert;
-use BrianFaust\Alert\Facades\Alert as Facade;
-use BrianFaust\Tests\Alert\AbstractTestCase;
+use Artisanry\Alert\Alert;
+use Artisanry\Alert\Facades\Alert as Facade;
+use Artisanry\Tests\Alert\AbstractTestCase;
 use GrahamCampbell\TestBenchCore\FacadeTrait;
 
 class AlertTest extends AbstractTestCase

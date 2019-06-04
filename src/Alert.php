@@ -5,13 +5,13 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Alert.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Alert;
+namespace Artisanry\Alert;
 
 use Illuminate\Session\Store;
 use Illuminate\Support\MessageBag;
@@ -28,7 +28,7 @@ class Alert
     /**
      * Construct a new Alert.
      *
-     * \BrianFaust\Alert\Alert constructor.
+     * \Artisanry\Alert\Alert constructor.
      *
      * @param Store $session
      */
@@ -44,7 +44,7 @@ class Alert
      * @param string       $level
      * @param string|null  $title
      *
-     * @return \BrianFaust\Alert\Alert
+     * @return \Artisanry\Alert\Alert
      */
     public function flash($message, string $level = 'info', ?string $title = null): self
     {
@@ -66,7 +66,7 @@ class Alert
      * @param string|array $message
      * @param string|null  $title
      *
-     * @return \BrianFaust\Alert\Alert
+     * @return \Artisanry\Alert\Alert
      */
     public function success($message, ?string $title = null): self
     {
@@ -79,7 +79,7 @@ class Alert
      * @param string|array $message
      * @param string|null  $title
      *
-     * @return \BrianFaust\Alert\Alert
+     * @return \Artisanry\Alert\Alert
      */
     public function info($message, ?string $title = null): self
     {
@@ -92,7 +92,7 @@ class Alert
      * @param string|array $message
      * @param string|null  $title
      *
-     * @return \BrianFaust\Alert\Alert
+     * @return \Artisanry\Alert\Alert
      */
     public function warning($message, ?string $title = null): self
     {
@@ -105,7 +105,7 @@ class Alert
      * @param string|array $message
      * @param string|null  $title
      *
-     * @return \BrianFaust\Alert\Alert
+     * @return \Artisanry\Alert\Alert
      */
     public function error($message, ?string $title = null): self
     {
